@@ -1,4 +1,4 @@
-// @/components/chunk-link/chunk-visualizer.tsx
+// @/components/ChunkLink/ChunkVisualizer.tsx
 
 import { FileText, Link as LinkIcon } from "lucide-react";
 import { Card } from "@/components/ui/card";

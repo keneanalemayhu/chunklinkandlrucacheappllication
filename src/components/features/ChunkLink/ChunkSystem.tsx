@@ -1,4 +1,4 @@
-// @/components/chunk-link/chunk-system.ts
+// @/components/ChunkLink/ChunkSystem.ts
 
 export interface ChunkNode {
   id: string;

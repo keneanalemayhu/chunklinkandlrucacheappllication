@@ -1,4 +1,4 @@
-// @/components/lru-cache/lru-system.ts
+// @/components/LruCache/LruSystem.ts
 
 interface DoublyLinkedListNode<T> {
   key: string;

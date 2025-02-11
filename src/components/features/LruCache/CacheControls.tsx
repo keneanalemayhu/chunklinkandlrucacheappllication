@@ -1,4 +1,4 @@
-// @/components/lru-cache/cache-controls.tsx
+// @/components/LruCache/CacheControls.tsx
 
 "use client";
 

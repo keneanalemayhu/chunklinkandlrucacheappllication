@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+// @/components/ChunkLink/FileProcessor.tsx
+
 import { useState, useCallback } from "react";
 import { AlertTriangle, Check, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";

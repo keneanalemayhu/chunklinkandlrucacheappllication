@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-// @/components/lru-cache/cache-visualizer.tsx
+// @/components/LruCache/CacheVisualizer.tsx
 
 import { Database } from "lucide-react";
 import { Card } from "@/components/ui/card";
