@@ -2,15 +2,20 @@
 
 import { FileText, Link as LinkIcon } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { translations } from "@/translations";
+import { useLanguage } from "@/components/context/LanguageContext";
 
 interface ChunkVisualizerProps {
   nodes: Array<{ id: string; size: number; hasNext: boolean }>;
 }
 
 export function ChunkVisualizer({ nodes }: ChunkVisualizerProps) {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <Card className="p-6">
-      <h3 className="text-lg font-semibold mb-4">Chunk Structure</h3>
+      <h3 className="text-lg font-semibold mb-4">{t.chunkStructure}</h3>
       <div className="flex flex-wrap gap-4 items-center">
         {nodes.map((node, index) => (
           <div key={node.id} className="flex items-center">

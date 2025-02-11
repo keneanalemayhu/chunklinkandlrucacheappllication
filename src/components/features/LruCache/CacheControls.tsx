@@ -10,8 +10,12 @@ import { Card } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { LRUCache } from "./LruSystem";
 import { CacheVisualizer } from "./CacheVisualizer";
+import { translations } from "@/translations";
+import { useLanguage } from "@/components/context/LanguageContext";
 
 export function CacheControls() {
+  const { language } = useLanguage();
+  const t = translations[language].lruCache;
   const [cache] = useState(() => new LRUCache<string>(5)); // Cache with capacity 5
   const [key, setKey] = useState("");
   const [value, setValue] = useState("");
@@ -62,31 +66,31 @@ export function CacheControls() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Put Controls */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Add Item</h3>
+            <h3 className="text-lg font-semibold">{t.addItem}</h3>
             <div className="flex space-x-2">
               <Input
-                placeholder="Key"
+                placeholder={t.keyPlaceholder}
                 value={key}
                 onChange={(e) => setKey(e.target.value)}
               />
               <Input
-                placeholder="Value"
+                placeholder={t.valuePlaceholder}
                 value={value}
                 onChange={(e) => setValue(e.target.value)}
               />
               <Button onClick={handlePut}>
                 <Plus className="w-4 h-4 mr-2" />
-                Add
+                {t.add}
               </Button>
             </div>
           </div>
 
           {/* Get Controls */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Search Item</h3>
+            <h3 className="text-lg font-semibold">{t.searchItem}</h3>
             <div className="flex space-x-2">
               <Input
-                placeholder="Search key"
+                placeholder={t.searchPlaceholder}
                 value={searchKey}
                 onChange={(e) => setSearchKey(e.target.value)}
               />
@@ -101,7 +105,7 @@ export function CacheControls() {
         <div className="mt-4 flex justify-end">
           <Button variant="destructive" onClick={handleClear}>
             <Trash2 className="w-4 h-4 mr-2" />
-            Clear Cache
+            {t.clearCache}
           </Button>
         </div>
 

@@ -11,6 +11,7 @@ export interface ChunkNode {
 export class ChunkLink {
   private head: ChunkNode | null = null;
   private nodeCount: number = 0;
+  onChunkCreated?: (progress: number) => void;
 
   constructor(private chunkSize: number = 1024 * 1024) {} // Default 1MB chunks
 
@@ -38,6 +39,10 @@ export class ChunkLink {
     const fileData = new Uint8Array(fileBuffer);
     const chunks: Uint8Array[] = [];
 
+    // Calculate total chunks
+    const totalChunks = Math.ceil(fileData.length / this.chunkSize);
+    let processedChunks = 0;
+
     // Split file into chunks
     for (let offset = 0; offset < fileData.length; offset += this.chunkSize) {
       const chunk = fileData.slice(offset, offset + this.chunkSize);
@@ -61,7 +66,12 @@ export class ChunkLink {
         }
         current.nextNode = node;
       }
+
       this.nodeCount++;
+      processedChunks++;
+
+      // Report progress
+      this.onChunkCreated?.(Math.round((processedChunks / totalChunks) * 100));
     }
 
     return this.nodeCount;
