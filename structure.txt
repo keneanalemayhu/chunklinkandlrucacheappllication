@@ -14,9 +14,11 @@ frontend/
     │   │   └── page.tsx
     │   ├── LruCache/
     │   │   └── page.tsx
+    │   ├── .htaccess
     │   ├── global.css
+    │   ├── layout.tsx
     │   ├── page.tsx
-    │   └── layout.tsx
+    │   └── provider.tsx
     ├── components/
     │   ├── common/
     │   │   ├── Header.tsx
