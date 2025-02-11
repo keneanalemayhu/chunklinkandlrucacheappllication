@@ -3,6 +3,7 @@
 export const am = {
   back: "ይመለሱ",
   chunkLinkSystem: "የተቆራኘ ቁርጥራጭ ስርዓት",
+  chunkStructure: "የተቆራኘ መዋቅር",
   root: {
     dsaProjectImplementation: "የDSA ፕሮጀክት ትግበራ",
     fileStorage: "በተቆራኘ ዝርዝር ትግበራ ላይ የተመሰረተ የፋይል ማከማቻ እና መልሶ ግንባታ ስርዓት",

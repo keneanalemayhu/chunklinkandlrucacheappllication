@@ -3,6 +3,7 @@
 export const en = {
   back: "Back",
   chunkLinkSystem: "ChunkLink System",
+  chunkStructure: "Chunk Structure",
   root: {
     dsaProjectImplementation: "DSA Project Implementation",
     fileStorage:
