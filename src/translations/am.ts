@@ -28,6 +28,12 @@ export const am = {
     progress: "ሂደት",
     uploadFile:
       "SHA-256 Hashing በመጠቀም ወደ ቁርጥራጮች ተከፍሎ እና ተገናኝቶ ለማየት ፋይል ይለጥፉ። እያንዳንዱ ቁርጥራጭ በደህንነቱ በተጠበቀ ሰንሰለት ቀጣዩ ጋር የተገናኘ ነው።",
+    checksumMismatchDetected: "Checksum mismatch detected",
+    failedToProcessFile: "ፋይሉን ለማስኬድ አልተሳካም",
+    verificationFailed: "ማረጋገጫ አልተሳካም",
+    downloadFailed: "ማውረድ አልተሳካም (Mawred altesakam)",
+    chainVerifiedSuccessfully: "ሰንሰለቱ በተሳካ ሁኔታ ተረጋግጧል!",
+    chainVerificationFailed: "ሰንሰለቱን ማረጋገጥ አልተሳካም",
   },
   lruCache: {
     LRUCacheImplementaion: "የLRU መሸጎጫ ትግበራ",
@@ -46,10 +52,14 @@ export const am = {
     cacheIsEmpty: "መሸጎጫታ ባዶ ነው",
     mru: "ቅ.ጥ.የ",
     lru: "ቅ.ጥ.ያ",
+    bothKeyValue: "ቁልፍም እና እሴት ያስፈልጋሉ",
+    FailedToAddItem: "እቃውን ለመጨመር አልተሳካም",
+    SearchKeyisRequired: "የፍለጋ ቁልፍ ያስፈልጋል",
   },
   ui: {
     uploadFile: "ፋይል ስቀል",
     dragAndDrop: "ፋይሎችዎን እዚህ ይጎትቱ ወይም ይጣሉ ወይም ለመስቀል ጠቅ ያድርጉ",
     DropIt: "ጣለው",
+    modified: "የተለወጠው ",
   },
 };

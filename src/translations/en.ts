@@ -31,6 +31,12 @@ export const en = {
     progress: "Progress",
     uploadFile:
       "Upload a file to see it split into chunks and linked together using SHA-256 hashing. Each chunk is connected to the next one in a secure chain.",
+    checksumMismatchDetected: "Checksum mismatch detected",
+    failedToProcessFile: "Failed to process file",
+    verificationFailed: "Verification failed",
+    downloadFailed: "Download failed",
+    chainVerifiedSuccessfully: "Chain verified successfully!",
+    chainVerificationFailed: "Chain verification failed",
   },
   lruCache: {
     LRUCacheImplementaion: "LRU Cache Implementation",
@@ -49,10 +55,14 @@ export const en = {
     cacheIsEmpty: "Cache is empty",
     mru: "MRU",
     lru: "LRU",
+    bothKeyValue: "Both key and value are required",
+    FailedToAddItem: "Failed to add item",
+    SearchKeyisRequired: "Search key is required",
   },
   ui: {
     uploadFile: "Upload file",
     dragAndDrop: "Drag or drop your files here or click to upload",
     DropIt: "Drop it",
+    modified: "Modified",
   },
 };

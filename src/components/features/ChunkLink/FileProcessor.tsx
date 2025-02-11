@@ -44,11 +44,11 @@ export function FileProcessor() {
       setNodes(system.getNodeList());
       setVerificationStatus("none");
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Failed to process file");
+      setError(err instanceof Error ? err.message : t.failedToProcessFile);
     } finally {
       setProcessing(false);
     }
-  }, []);
+  }, [t.failedToProcessFile]);
 
   const verifyChain = useCallback(async () => {
     if (!chunkSystem) return;
@@ -57,9 +57,9 @@ export function FileProcessor() {
       const issues = await chunkSystem.verifyChain();
       setVerificationStatus(issues.length === 0 ? "verified" : "failed");
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Verification failed");
+      setError(err instanceof Error ? err.message : t.verificationFailed);
     }
-  }, [chunkSystem]);
+  }, [chunkSystem, t.verificationFailed]);
 
   const downloadReconstructed = useCallback(async () => {
     if (!chunkSystem) return;
@@ -73,9 +73,9 @@ export function FileProcessor() {
       a.click();
       URL.revokeObjectURL(url);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Download failed");
+      setError(err instanceof Error ? err.message : t.downloadFailed);
     }
-  }, [chunkSystem]);
+  }, [chunkSystem, t.downloadFailed]);
 
   return (
     <div className="space-y-6">
@@ -128,8 +128,8 @@ export function FileProcessor() {
               )}
               <AlertDescription>
                 {verificationStatus === "verified"
-                  ? "Chain verified successfully!"
-                  : "Chain verification failed"}
+                  ? t.chainVerifiedSuccessfully!
+                  : t.chainVerificationFailed}
               </AlertDescription>
             </Alert>
           )}

@@ -125,7 +125,7 @@ export const FileUpload = ({
                       animate={{ opacity: 1 }}
                       layout
                     >
-                      modified{" "}
+                      {t.modified}{" "}
                       {new Date(file.lastModified).toLocaleDateString()}
                     </motion.p>
                   </div>
