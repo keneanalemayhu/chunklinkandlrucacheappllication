@@ -64,21 +64,28 @@ export default function Home() {
         </div>
 
         <div className="flex items-start gap-6 p-6 bg-muted/50 rounded-lg">
-          <div className="flex items-center gap-4">
+          <div className="flex flex-col gap-2">
             <a
               href="/files/DsaProjectDescription.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              className="flex items-center gap-2 px-3 py-1.5 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors"
             >
-              <FileText className="w-6 h-6" />
+              <FileText className="w-4 h-4" />
               <span>{t.root.downloadProjectDescription}</span>
+            </a>
+            <a
+              href="/files/projectDocumentation.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-3 py-1.5 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              <FileText className="w-4 h-4" />
+              <span>{t.root.downloadProjectDocumentation}</span>
             </a>
           </div>
           <div className="space-y-4">
-            <h2 className="text-xl font-semibold">
-              {t.root.teacher}
-            </h2>
+            <h2 className="text-xl font-semibold">{t.root.teacher}</h2>
             <a
               href="https://github.com/keneanalemayhu/chunklinkandlrucacheappllication"
               target="_blank"

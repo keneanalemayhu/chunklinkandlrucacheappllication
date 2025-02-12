@@ -18,6 +18,7 @@ export const am = {
     sizeManagement: "የመጠን አስተዳደር",
     usageTracking: "የአጠቃቀም ክትትል",
     downloadProjectDescription: "የፕሮጀክት መግለጫ (PDF) ያውርዱ",
+    downloadProjectDocumentation: "የፕሮጀክት ሰነድ (PDF) ያውርዱ",
     teacher: "ይህ በአስተማሪችን የተሰጠን የፕሮጀክት መግለጫ ነው።",
     github: "ሙሉውን ኮድ በGitHub ላይ ያግኙ",
   },

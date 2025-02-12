@@ -20,6 +20,7 @@ export const en = {
     sizeManagement: "Size management",
     usageTracking: "Usage tracking",
     downloadProjectDescription: "Download Project Description (PDF)",
+    downloadProjectDocumentation: "Download Project Documentation (PDF)",
     teacher:
       "This is the project description that was given to us by our teacher",
     github: "Get the whole code on GitHub",
